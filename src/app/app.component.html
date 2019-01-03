@@ -1,0 +1,13 @@
+<!--<app-zoo></app-zoo>-->
+<input type="text" #productName placeholder="please enter the name of product" value="item name">
+<button (click)="addProduct(productName.value)">新增產品</button>
+<button (click)="removeProduct()">刪除產品</button>
+<br> ProductList:
+<div *ngFor="let item of productList | async">
+    name:{{item._name}}
+    <br>
+    quantity:{{item._quantity}}
+    <br>
+    price:{{item._price}}
+    <hr>
+</div>
